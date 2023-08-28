@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none !important;
+  border: none;
+  background-color: #212121;
+}
 .App {
   text-align: center;
 }
@@ -12,10 +21,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #212121;
+  padding: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +31,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.App-title {
+  margin-bottom: auto;
+}
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +45,169 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* sec calculator */
+
+.container__calculator {
+  border: 20px solid #444444;
+  border-radius: 100px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  background-color: #212121;
+  width: max-content;
+  height: max-content;
+  width: 550px;
+  max-width: 550px;
+  min-height: 750px;
+  box-shadow: inset 0px 0px 2px 0px rgba(255, 122, 0, 1),
+    0px 5px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.calculator-display {
+  position: relative;
+
+  text-align: right;
+  width: 500px;
+  max-width: 500px;
+  overflow: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  margin-right: 20px;
+  margin-top: auto;
+
+  font-size: 60px;
+  color: #fff;
+}
+.calculator-display-answer {
+  color: #9e9e9e;
+}
+.calculator {
+  position: relative;
+
+  width: max-content;
+  height: max-content;
+}
+.calculator::before {
+  content: "";
+  display: block;
+  background-color: #d9d9d9;
+  height: 3px;
+  width: 460px;
+  border-radius: 100px;
+}
+.calculator-elements,
+button {
+  display: grid;
+  gap: 20px;
+
+  font-size: 30px;
+  color: #fff;
+  /* border: 10px solid rgb(102, 90, 175); */
+  grid-template-areas:
+    "el-12 el-13 el-14 el-15"
+    "el-1 el-2 el-3 el-16"
+    "el-4 el-5 el-6 el-17"
+    "el-7 el-8 el-9 el-18"
+    "el-10 el-11 el-20 el-19";
+}
+.element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 70px;
+}
+.element__num {
+  color: #ffffff;
+}
+.element__operation > * {
+  color: rgb(255, 122, 0);
+}
+/* sec grid-el */
+
+.grid-el-1 {
+  grid-area: el-1;
+}
+.grid-el-2 {
+  grid-area: el-2;
+}
+.grid-el-3 {
+  grid-area: el-3;
+}
+.grid-el-4 {
+  grid-area: el-4;
+}
+.grid-el-5 {
+  grid-area: el-5;
+}
+.grid-el-6 {
+  grid-area: el-6;
+}
+.grid-el-7 {
+  grid-area: el-7;
+}
+.grid-el-8 {
+  grid-area: el-8;
+}
+.grid-el-9 {
+  grid-area: el-9;
+}
+.grid-el-10 {
+  grid-area: el-10;
+}
+.grid-el-11 {
+  grid-area: el-11;
+}
+.grid-el-12 {
+  grid-area: el-12;
+}
+.grid-el-13 {
+  grid-area: el-13;
+}
+.grid-el-14 {
+  grid-area: el-14;
+}
+.grid-el-15 {
+  grid-area: el-15;
+}
+.grid-el-16 {
+  grid-area: el-16;
+}
+.grid-el-17 {
+  grid-area: el-17;
+}
+.grid-el-18 {
+  grid-area: el-18;
+}
+.grid-el-19 {
+  grid-area: el-19;
+  border: none;
+}
+.grid-el-19 span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  color: #ffffff;
+  background-color: #ff7a00;
+  padding-bottom: 5px;
+}
+.grid-el-20 {
+  grid-area: el-20;
+}
+button {
+  background-color: inherit;
+  transition: 0.2s all linear;
+}
+button:active {
+  background-color: #ff7a00;
+  color: #fff;
+  border-radius: 100px;
 }
